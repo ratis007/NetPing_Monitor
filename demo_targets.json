@@ -1,0 +1,66 @@
+{
+  "targets": {
+    "Google DNS": {
+      "address": "8.8.8.8",
+      "interval": 30,
+      "status": "unknown",
+      "response_time": 0,
+      "last_check": "",
+      "last_check_timestamp": 0,
+      "failures": 0,
+      "consecutive_failures": 0,
+      "created_at": "2026-06-18T10:00:00",
+      "last_modified": "2026-06-18T10:00:00"
+    },
+    "Cloudflare DNS": {
+      "address": "1.1.1.1",
+      "interval": 30,
+      "status": "unknown",
+      "response_time": 0,
+      "last_check": "",
+      "last_check_timestamp": 0,
+      "failures": 0,
+      "consecutive_failures": 0,
+      "created_at": "2026-06-18T10:00:00",
+      "last_modified": "2026-06-18T10:00:00"
+    },
+    "OpenDNS": {
+      "address": "208.67.222.222",
+      "interval": 45,
+      "status": "unknown",
+      "response_time": 0,
+      "last_check": "",
+      "last_check_timestamp": 0,
+      "failures": 0,
+      "consecutive_failures": 0,
+      "created_at": "2026-06-18T10:00:00",
+      "last_modified": "2026-06-18T10:00:00"
+    },
+    "Google Web": {
+      "address": "www.google.com",
+      "interval": 60,
+      "status": "unknown",
+      "response_time": 0,
+      "last_check": "",
+      "last_check_timestamp": 0,
+      "failures": 0,
+      "consecutive_failures": 0,
+      "created_at": "2026-06-18T10:00:00",
+      "last_modified": "2026-06-18T10:00:00"
+    },
+    "GitHub": {
+      "address": "github.com",
+      "interval": 90,
+      "status": "unknown",
+      "response_time": 0,
+      "last_check": "",
+      "last_check_timestamp": 0,
+      "failures": 0,
+      "consecutive_failures": 0,
+      "created_at": "2026-06-18T10:00:00",
+      "last_modified": "2026-06-18T10:00:00"
+    }
+  },
+  "last_saved": "2026-06-18T10:00:00",
+  "version": "1.0"
+}

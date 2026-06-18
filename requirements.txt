@@ -1,0 +1,25 @@
+# NetPing Monitor - Dépendances Python
+# Application de surveillance réseau avec interface Tkinter
+
+# Interface graphique
+tkinter  # Inclus avec Python standard sur Windows
+
+# Pour la génération d'exécutable (optionnel)
+# pyinstaller==6.0.0
+
+# Pour les tests (optionnel)
+# pytest==7.4.0
+
+# Note: Tkinter est inclus avec l'installation standard de Python sur Windows
+# Pour d'autres systèmes, il peut nécessiter une installation séparée
+
+# Sous Windows, Tkinter est généralement déjà installé avec Python
+# Si ce n'est pas le cas, vous pouvez l'installer avec:
+# pip install tk
+
+# Pour générer un exécutable .exe:
+# pip install pyinstaller
+# pyinstaller --onefile --windowed --icon=icon.ico main.py
+
+# Aucune dépendance externe n'est requise pour les fonctionnalités de base
+# Les modules winsound et platform sont inclus dans la bibliothèque standard
