@@ -5,7 +5,7 @@ Interface principale de l'application
 """
 
 import tkinter as tk
-from tkinter import ttk, messagebox
+from tkinter import ttk, messagebox, simpledialog
 import threading
 import time
 from datetime import datetime
@@ -247,6 +247,7 @@ class NetPingMonitor:
             'status': 'unknown',
             'response_time': 0,
             'last_check': '',
+            'last_check_timestamp': 0,
             'failures': 0,
             'consecutive_failures': 0
         }
@@ -286,7 +287,7 @@ class NetPingMonitor:
         item = self.target_tree.item(selection[0])
         target_name = item['values'][0]
         
-        new_interval = tk.simpledialog.askinteger(
+        new_interval = simpledialog.askinteger(
             "Modifier l'intervalle",
             f"Nouvel intervalle pour {target_name} (secondes):",
             minvalue=5,

@@ -16,7 +16,7 @@ class TargetManager:
     def __init__(self, config_file="targets.json"):
         self.config_file = config_file
         self.targets = {}  # Format: {name: target_data}
-        self.lock = threading.Lock()
+        self.lock = threading.RLock()  # RLock pour les verrous réentrants
         
     def add_target(self, target_data):
         """
@@ -72,7 +72,7 @@ class TargetManager:
         with self.lock:
             if target_name in self.targets:
                 del self.targets[target_name]
-                self.save_targets()
+                self._save_targets_unlocked()
                 return True
             return False
     
@@ -209,15 +209,25 @@ class TargetManager:
         """Sauvegarde les cibles dans un fichier JSON"""
         try:
             with self.lock:
-                data = {
-                    'targets': self.targets,
-                    'last_saved': datetime.now().isoformat(),
-                    'version': '1.0'
-                }
-                
-                with open(self.config_file, 'w', encoding='utf-8') as f:
-                    json.dump(data, f, indent=2, ensure_ascii=False)
-                
+                self._save_targets_unlocked()
+            return True
+            
+        except Exception as e:
+            print(f"Erreur lors de la sauvegarde: {e}")
+            return False
+    
+    def _save_targets_unlocked(self):
+        """Sauvegarde les cibles sans verrou (à appeler depuis un verrou acquis)"""
+        try:
+            data = {
+                'targets': self.targets,
+                'last_saved': datetime.now().isoformat(),
+                'version': '1.0'
+            }
+            
+            with open(self.config_file, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            
             return True
             
         except Exception as e:
