@@ -1,9 +1,21 @@
 # NetPing Monitor - Dépendances Python
-# Application de surveillance réseau avec interface CustomTkinter
+# Application de surveillance réseau avec interface CustomTkinter et module SpeedTest
 
 # Interface graphique moderne
 customtkinter==5.2.1
 packaging>=21.0
+
+# Module SpeedTest Réseau
+speedtest-cli==2.1.3         # Tests de débit réseau
+requests>=2.31.0             # API HTTP pour détection IP
+openpyxl>=3.1.2              # Export Excel avec graphiques
+pandas>=2.1.0               # Manipulation de données
+matplotlib>=3.7.0           # Graphiques avancés
+
+# Manipulation de données avancée
+numpy>=1.24.0               # Pour pandas et matplotlib
+python-dateutil>=2.8.2      # Manipulation de dates
+pytz>=2023.3                # Fuseaux horaires
 
 # Pour la génération d'exécutable (optionnel)
 # pyinstaller==6.0.0
@@ -15,6 +27,12 @@ packaging>=21.0
 # Sous Windows, Tkinter est généralement déjà installé avec Python
 
 # Pour installer les dépendances:
+# pip install -r requirements.txt
+
+# Pour installer uniquement les modules essentiels:
+# pip install customtkinter packaging speedtest-cli requests
+
+# Pour installer avec toutes les dépendances:
 # pip install -r requirements.txt
 
 # Pour générer un exécutable .exe:

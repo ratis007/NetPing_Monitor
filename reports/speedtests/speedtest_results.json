@@ -1,0 +1,24 @@
+[
+  {
+    "timestamp": "2026-06-22T13:27:03.054520",
+    "date": "2026-06-22",
+    "time": "13:27:03",
+    "success": false,
+    "error": "Erreur de parsing JSON: Expecting value: line 1 column 1 (char 0)",
+    "public_ip": "41.243.7.250",
+    "isp": "CELTEL DRC",
+    "city": "Masina",
+    "country": "Democratic Republic of the Congo",
+    "ping": null,
+    "download": null,
+    "upload": null,
+    "jitter": null,
+    "packet_loss": null,
+    "server_name": null,
+    "server_id": null,
+    "server_url": null,
+    "status": "unknown",
+    "status_message": null,
+    "id": "20260622132705"
+  }
+]

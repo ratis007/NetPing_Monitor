@@ -1,0 +1,19 @@
+{
+  "targets": {
+    "cns": {
+      "address": "41.243.13.114",
+      "interval": 30,
+      "status": "online",
+      "response_time": 27.0,
+      "last_check": "2026-06-22 11:12:25",
+      "last_check_timestamp": 1782123145.7255633,
+      "failures": 8,
+      "consecutive_failures": 0,
+      "created_at": "2026-06-19T08:30:40.565614",
+      "last_modified": "2026-06-19T08:30:40.565629",
+      "name": "cns"
+    }
+  },
+  "last_saved": "2026-07-03T18:23:39.540755",
+  "version": "1.0"
+}
